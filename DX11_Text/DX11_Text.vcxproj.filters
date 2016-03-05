@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{20aabb49-2158-4a1b-a039-297df7178051}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DX11_Text.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\DX11TexDemo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\DX11SpriteDemo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\DX11Demo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\DX11Base.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\DX11FontDemo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\DX11CubeDemo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\DX113DBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\DX11CubeEffectDemo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\DX11Camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceProvider\mtlLoader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceProvider\objLoader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceProvider\objModel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\DX11ModelDemo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\DX11NormalMappingDemo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GeometryGens.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Lights.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DX11_Text.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\DX11TexDemo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\DX11SpriteDemo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\DX11Demo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\DX11Base.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\DX11FontDemo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\DX11CubeDemo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\DX113DBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\DX11CubeEffectDemo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\DX11Camera.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceProvider\mtlLoader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceProvider\objLoader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceProvider\objModel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\DX11ModelDemo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\DX11NormalMappingDemo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\GeometryGens.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DX11_Text.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="DX11_Text.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shader\DX11Demo.fx">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="Shader\DX11SpriteDemo.fx" />
+    <None Include="Shader\DX11TexDemo.fx" />
+    <None Include="Shader\DX11CubeDemo.fx" />
+    <None Include="Shader\DX11CubeEffectDemo.fx" />
+    <None Include="Shader\DX11ModelDemo.fx" />
+    <None Include="Shader\DX11NormalMappingDemo.fx" />
+    <None Include="Shader\Light.fx" />
+  </ItemGroup>
+</Project>
