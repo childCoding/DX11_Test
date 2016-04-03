@@ -5,6 +5,7 @@
 #include <windowsX.h>
 #include "DX11_Text.h"
 #include "Demo/DX11Demo.h"
+#include "Demo/DX11MapDemo.h"
 #include "Demo/DX11TexDemo.h"
 #include "Demo/DX11SpriteDemo.h"
 #include "Demo/DX11FontDemo.h"
@@ -49,7 +50,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	{
 		return FALSE;
 	}
-	g_dxBase = new DX11NormalMappingDemo();
+	g_dxBase = new DX11SpriteDemo();
 	if (!g_dxBase->Initialize(hInstance,hwnd))
 	{
 		return FALSE;

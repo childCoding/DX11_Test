@@ -186,6 +186,7 @@ bool DX11SpriteDemo::LoadContent()
 
 	XMMATRIX view = XMMatrixIdentity( );
 	XMMATRIX projection = XMMatrixOrthographicOffCenterLH( 0.0f, GetClientWidth(),0.0f,GetClientHeight(), 0.1f, 100.0f );
+
 	vpMatrix_ = XMMatrixMultiply( view, projection );
 
 	D3D11_BLEND_DESC blendDesc;

@@ -90,6 +90,7 @@
     <ClInclude Include="Demo\DX11Camera.h" />
     <ClInclude Include="Demo\DX11CubeEffectDemo.h" />
     <ClInclude Include="Demo\DX11Demo.h" />
+    <ClInclude Include="Demo\DX11MapDemo.h" />
     <ClInclude Include="Demo\DX11ModelDemo.h" />
     <ClInclude Include="Demo\DX11NormalMappingDemo.h" />
     <ClInclude Include="Demo\DX11SpriteDemo.h" />
@@ -117,6 +118,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Demo\DX11Demo.cpp" />
+    <ClCompile Include="Demo\DX11MapDemo.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Demo\DX11ModelDemo.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>

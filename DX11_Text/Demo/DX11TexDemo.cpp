@@ -73,12 +73,12 @@ bool DX11TexDemo::LoadContent()
 
 	//初始化定点序列
 	Vertex vertexs[] ={
-		{ XMFLOAT3( 0.1f, 0.1f, 0.1f ), XMFLOAT2( 1.0f, 1.0f ) },
-		{ XMFLOAT3( 0.1f, -0.1f, 0.1f ), XMFLOAT2( 1.0f, 0.0f ) },
-		{ XMFLOAT3( -0.1f, -0.1f, 0.1f ), XMFLOAT2( 0.0f, 0.0f ) },
-		{ XMFLOAT3( -0.1f, -0.1f, 0.1f ), XMFLOAT2( 0.0f, 0.0f ) },
-		{ XMFLOAT3( -0.1f, 0.1f, 0.1f ), XMFLOAT2( 0.0f, 1.0f ) },
-		{ XMFLOAT3( 0.1f, 0.1f, 0.1f ), XMFLOAT2( 1.0f, 1.0f ) },
+		{ XMFLOAT3( 1.0f, 1.0f, 1.0f ), XMFLOAT2( 1.0f, 0.0f ) },
+		{ XMFLOAT3( 1.0f, -1.0f, 1.0f ), XMFLOAT2( 1.0f, 1.0f ) },
+		{ XMFLOAT3( -1.0f, -1.0f, 1.0f ), XMFLOAT2( 0.0f, 1.0f ) },
+		{ XMFLOAT3( -1.0f, -1.0f, 1.0f ), XMFLOAT2( 0.0f, 1.0f ) },
+		{ XMFLOAT3( -1.0f, 1.0f, 1.0f ), XMFLOAT2( 0.0f, 0.0f ) },
+		{ XMFLOAT3( 1.0f, 1.0f, 1.0f ), XMFLOAT2( 1.0f, 0.0f ) },
 	};
 	D3D11_BUFFER_DESC desc;
 	ZeroMemory(&desc,sizeof(desc));
@@ -96,7 +96,7 @@ bool DX11TexDemo::LoadContent()
 		return false;
 	}
 
-	d3dResult = D3DX11CreateShaderResourceViewFromFile(D3D11Device_,"img/tex.dds",0,0,&colorMap_,0);
+	d3dResult = D3DX11CreateShaderResourceViewFromFile(D3D11Device_,"img/1002.map.dds",0,0,&colorMap_,0);
 	if (FAILED(d3dResult))
 	{
 		DXTRACE_MSG("failed to load texture file!");

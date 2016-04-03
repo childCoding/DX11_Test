@@ -165,7 +165,7 @@ void DX11FontDemo::Render()
 	D3D11DeviceContext_->PSSetShaderResources(0,1,&colorMap_);
 	D3D11DeviceContext_->PSSetSamplers(0,1,&colorMapSampler_);
 
-	DrawString("74532012",-0.2,0.0);
+	DrawString("1234567",-0.2,0.0);
 	
 
 	DXGISwapChain_->Present(0,0);
