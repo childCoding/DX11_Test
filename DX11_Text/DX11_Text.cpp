@@ -50,7 +50,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	{
 		return FALSE;
 	}
-	g_dxBase = new DX11MapDemo();
+	g_dxBase = new DX11FontDemo();
 	if (!g_dxBase->Initialize(hInstance,hwnd))
 	{
 		return FALSE;
