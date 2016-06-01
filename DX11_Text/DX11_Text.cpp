@@ -50,7 +50,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	{
 		return FALSE;
 	}
-	g_dxBase = new DX11SpriteDemo();
+	g_dxBase = new DX11MapDemo();
 	if (!g_dxBase->Initialize(hInstance,hwnd))
 	{
 		return FALSE;
@@ -206,6 +206,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		break;
 	case WM_SIZE:
 		OutputDebugString("WM_SIZE:----\n");
+		g_dxBase->OnSized(wParam,GET_X_LPARAM(lParam),GET_Y_LPARAM(lParam));
 	default:
 		return DefWindowProc(hWnd, message, wParam, lParam);
 	}

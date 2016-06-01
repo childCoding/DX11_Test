@@ -29,6 +29,7 @@ public:
 	virtual void OnMouseUp(WPARAM btnState, int x, int y)  { }
 	virtual void OnMouseMove(WPARAM btnState, int x, int y){ }
 	virtual void OnMouseWheel(WPARAM btnState, int x, int y){}
+	virtual void OnSized(WPARAM btnState, int x, int y){ ::GetClientRect(hWnd_,&ClientRect_); }
 protected:
 	RECT ClientRect_;
 

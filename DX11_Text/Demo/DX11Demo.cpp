@@ -1,19 +1,20 @@
 #include "stdafx.h"
 #include "DX11Demo.h"
-
-
+	
+	
 DX11Demo::DX11Demo(void):
 	vertexShader_(nullptr),
 	pixelShader_(nullptr),
 	inputLayout_(nullptr),
 	vertexBuffer_(nullptr)
 {
+
 }
 
-
+	
 DX11Demo::~DX11Demo(void)
 {
-  UnloadContent();
+		  UnloadContent();
 }
 
 bool DX11Demo::LoadContent()
@@ -70,11 +71,11 @@ bool DX11Demo::LoadContent()
 	//初始化定点序列
 	Vertex vertexs[] ={
 		XMFLOAT3(0.5f,0.5f,0.5f),
-		XMFLOAT3(0.5f,-0.5f,0.5f),
-		XMFLOAT3(-0.5f,-0.5f,0.5f),
+		XMFLOAT3(0.5f,0.5f,0.5f),
+		XMFLOAT3(0.5f,0.5f,0.5f),
 
-		XMFLOAT3(-0.5f,-0.5f,0.5f),
-		XMFLOAT3(-0.5f,0.5f,0.5f),	
+		XMFLOAT3(0.5f,0.5f,0.5f),
+		XMFLOAT3(0.5f,0.5f,0.5f),	
 		XMFLOAT3(0.5f,0.5f,0.5f)
 	};
 	D3D11_BUFFER_DESC desc;
@@ -126,11 +127,11 @@ void DX11Demo::Render()
 
 	Vertex vertexs[] ={
 		XMFLOAT3(0.5f,0.5f,0.5f),
-		XMFLOAT3(0.5f,-0.5f,0.5f),
-		XMFLOAT3(-0.5f,-0.5f,0.5f),
+		XMFLOAT3(0.5f,0.5f,0.5f),
+		XMFLOAT3(0.5f,0.5f,0.5f),
 
-		XMFLOAT3(-0.5f,-0.5f,0.5f),
-		XMFLOAT3(-0.5f,0.5f,0.5f),	
+		XMFLOAT3(0.5f,0.5f,0.5f),
+		XMFLOAT3(0.5f,0.5f,0.5f),	
 		XMFLOAT3(0.5f,0.5f,0.5f)
 	};
 
@@ -151,3 +152,5 @@ void DX11Demo::Update(float dtime)
 {
 
 }
+
+
