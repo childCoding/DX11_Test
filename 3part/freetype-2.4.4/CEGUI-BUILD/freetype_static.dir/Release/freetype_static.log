@@ -1,0 +1,105 @@
+﻿生成启动时间为 2016/1/11 22:58:22。
+     1>项目“E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\CEGUI-BUILD\freetype_static.vcxproj”在节点 9 上(Build 个目标)。
+     1>CustomBuild:
+         Building Custom Rule E:/BaiduYunDownload/CEGUI/cegui-deps-0.8.x-src/src/freetype-2.4.4/CEGUI-BUILD/CMakeLists.txt
+         CMake does not need to re-run because E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\CEGUI-BUILD\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\CEGUI-BUILD\..\include" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D FT2_BUILD_LIBRARY /D _CRT_SECURE_NO_WARNINGS /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"freetype_static.dir\Release\\" /Fd"freetype_static.dir\Release\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftsystem.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftinit.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftdebug.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftbase.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftbbox.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftglyph.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftbdf.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftbitmap.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftcid.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftfstype.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftgasp.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftgxval.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftlcdfil.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftmm.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftotval.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftpatent.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftpfr.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftstroke.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftsynth.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\fttype1.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftwinfnt.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftxf86.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\bdf\bdf.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\cff\cff.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\cid\type1cid.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\pcf\pcf.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\pfr\pfr.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\sfnt\sfnt.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\truetype\truetype.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\type1\type1.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\type42\type42.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\winfonts\winfnt.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\raster\raster.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\smooth\smooth.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\autofit\autofit.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\cache\ftcache.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\gzip\ftgzip.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\lzw\ftlzw.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\gxvalid\gxvalid.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\otvalid\otvalid.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\psaux\psaux.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\pshinter\pshinter.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\psnames\psnames.c"
+         ftsystem.c
+         ftinit.c
+         ftdebug.c
+         ftbase.c
+         ftbbox.c
+         ftglyph.c
+         ftbdf.c
+         ftbitmap.c
+         ftcid.c
+         ftfstype.c
+         ftgasp.c
+         ftgxval.c
+         ftlcdfil.c
+         ftmm.c
+         ftotval.c
+         ftpatent.c
+         ftpfr.c
+         ftstroke.c
+         ftsynth.c
+         fttype1.c
+         正在生成代码...
+         正在编译...
+         ftwinfnt.c
+         ftxf86.c
+         bdf.c
+         cff.c
+         type1cid.c
+         pcf.c
+         pfr.c
+         sfnt.c
+         truetype.c
+         type1.c
+         type42.c
+         winfnt.c
+         raster.c
+         smooth.c
+         autofit.c
+         ftcache.c
+         ftgzip.c
+         ftlzw.c
+         gxvalid.c
+         otvalid.c
+         正在生成代码...
+         正在编译...
+         psaux.c
+         pshinter.c
+         psnames.c
+         正在生成代码...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\dependencies\lib\static\freetype.lib" /NOLOGO freetype_static.dir\Release\ftsystem.obj
+         freetype_static.dir\Release\ftinit.obj
+         freetype_static.dir\Release\ftdebug.obj
+         freetype_static.dir\Release\ftbase.obj
+         freetype_static.dir\Release\ftbbox.obj
+         freetype_static.dir\Release\ftglyph.obj
+         freetype_static.dir\Release\ftbdf.obj
+         freetype_static.dir\Release\ftbitmap.obj
+         freetype_static.dir\Release\ftcid.obj
+         freetype_static.dir\Release\ftfstype.obj
+         freetype_static.dir\Release\ftgasp.obj
+         freetype_static.dir\Release\ftgxval.obj
+         freetype_static.dir\Release\ftlcdfil.obj
+         freetype_static.dir\Release\ftmm.obj
+         freetype_static.dir\Release\ftotval.obj
+         freetype_static.dir\Release\ftpatent.obj
+         freetype_static.dir\Release\ftpfr.obj
+         freetype_static.dir\Release\ftstroke.obj
+         freetype_static.dir\Release\ftsynth.obj
+         freetype_static.dir\Release\fttype1.obj
+         freetype_static.dir\Release\ftwinfnt.obj
+         freetype_static.dir\Release\ftxf86.obj
+         freetype_static.dir\Release\bdf.obj
+         freetype_static.dir\Release\cff.obj
+         freetype_static.dir\Release\type1cid.obj
+         freetype_static.dir\Release\pcf.obj
+         freetype_static.dir\Release\pfr.obj
+         freetype_static.dir\Release\sfnt.obj
+         freetype_static.dir\Release\truetype.obj
+         freetype_static.dir\Release\type1.obj
+         freetype_static.dir\Release\type42.obj
+         freetype_static.dir\Release\winfnt.obj
+         freetype_static.dir\Release\raster.obj
+         freetype_static.dir\Release\smooth.obj
+         freetype_static.dir\Release\autofit.obj
+         freetype_static.dir\Release\ftcache.obj
+         freetype_static.dir\Release\ftgzip.obj
+         freetype_static.dir\Release\ftlzw.obj
+         freetype_static.dir\Release\gxvalid.obj
+         freetype_static.dir\Release\otvalid.obj
+         freetype_static.dir\Release\psaux.obj
+         freetype_static.dir\Release\pshinter.obj
+         freetype_static.dir\Release\psnames.obj
+         freetype_static.vcxproj -> E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\dependencies\lib\static\freetype.lib
+     1>已完成生成项目“E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\CEGUI-BUILD\freetype_static.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:10.17

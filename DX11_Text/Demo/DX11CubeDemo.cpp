@@ -151,13 +151,21 @@ bool DX11CubeDemo::LoadContent()
 		return false;
 	}
 	//加载贴图
-	d3dResult = D3DX11CreateShaderResourceViewFromFile( D3D11Device_, "img/heart.dds", 0, 0, &secondMap_, 0 );
+	d3dResult = D3DX11CreateShaderResourceViewFromFile( D3D11Device_, "img/head.dds", 0, 0, &secondMap_, 0 );
 	if( FAILED( d3dResult ) )
 	{
 		DXTRACE_MSG( "Failed to load the texture image!" );
 		return false;
 	}
-	
+
+	//加载贴图
+	d3dResult = D3DX11CreateShaderResourceViewFromFile( D3D11Device_, "img/bound.dds", 0, 0, &clipMap_, 0 );
+	if( FAILED( d3dResult ) )
+	{
+		DXTRACE_MSG( "Failed to load the texture image!" );
+		return false;
+	}
+
 	D3D11_SAMPLER_DESC mapDesc;
 	ZeroMemory(&mapDesc,sizeof(mapDesc));
 	mapDesc.AddressU = D3D11_TEXTURE_ADDRESS_WRAP;
@@ -243,6 +251,7 @@ void DX11CubeDemo::Render()
 	D3D11DeviceContext_->PSSetShader(pixelShader_,0,0);
 	D3D11DeviceContext_->PSSetShaderResources(0,1,&colorMap_);  //设置第一个槽的纹理map
 	D3D11DeviceContext_->PSSetShaderResources(1,1,&secondMap_); //设置第二个槽的纹理map
+	D3D11DeviceContext_->PSSetShaderResources(2,1,&clipMap_); //设置第三个槽的纹理map
 	D3D11DeviceContext_->PSSetSamplers(0,1,&colorMapSampler_);
 
 	XMMATRIX worldMat = XMLoadFloat4x4(&worldMat_);

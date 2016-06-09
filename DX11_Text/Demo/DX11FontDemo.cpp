@@ -165,7 +165,7 @@ void DX11FontDemo::Render()
 	D3D11DeviceContext_->PSSetShaderResources(0,1,&colorMap_);
 	D3D11DeviceContext_->PSSetSamplers(0,1,&colorMapSampler_);
 
-	DrawString("1234567",-0.2,0.0);
+	DrawString("1234567",-0.2f,0.0f);
 	
 
 	DXGISwapChain_->Present(0,0);
@@ -180,10 +180,10 @@ bool DX11FontDemo::DrawString(char* str,float startX,float startY)
 	const int spriteSize = sizeof(Vertex) * 6;
 	const int maxletter  = 10 ;	
 
-	float charWidth = 84.0 / GetClientWidth();
-	float charHeight = 76.0 / GetClientHeight();
+	float charWidth = 84.0f / GetClientWidth();
+	float charHeight = 76.0f / GetClientHeight();
 
-	float pixelWidth = 83.6 / 836.0f;
+	float pixelWidth = 83.6f / 836.0f;
 
 	D3D11_MAPPED_SUBRESOURCE subresource;
 	HRESULT reslut = D3D11DeviceContext_->Map(vertexBuffer_,0,D3D11_MAP_WRITE_DISCARD,0,&subresource);

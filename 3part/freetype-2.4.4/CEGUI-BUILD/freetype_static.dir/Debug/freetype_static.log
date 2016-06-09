@@ -1,0 +1,52 @@
+﻿生成启动时间为 2016/6/2 16:11:59。
+     1>项目“E:\project\DX11_Text\3part\freetype-2.4.4\CEGUI-BUILD\freetype_static.vcxproj”在节点 2 上(Build 个目标)。
+     1>Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"../../../Debug\freetype_d.lib" /NOLOGO freetype_static.dir\Debug\ftsystem.obj
+         freetype_static.dir\Debug\ftinit.obj
+         freetype_static.dir\Debug\ftdebug.obj
+         freetype_static.dir\Debug\ftbase.obj
+         freetype_static.dir\Debug\ftbbox.obj
+         freetype_static.dir\Debug\ftglyph.obj
+         freetype_static.dir\Debug\ftbdf.obj
+         freetype_static.dir\Debug\ftbitmap.obj
+         freetype_static.dir\Debug\ftcid.obj
+         freetype_static.dir\Debug\ftfstype.obj
+         freetype_static.dir\Debug\ftgasp.obj
+         freetype_static.dir\Debug\ftgxval.obj
+         freetype_static.dir\Debug\ftlcdfil.obj
+         freetype_static.dir\Debug\ftmm.obj
+         freetype_static.dir\Debug\ftotval.obj
+         freetype_static.dir\Debug\ftpatent.obj
+         freetype_static.dir\Debug\ftpfr.obj
+         freetype_static.dir\Debug\ftstroke.obj
+         freetype_static.dir\Debug\ftsynth.obj
+         freetype_static.dir\Debug\fttype1.obj
+         freetype_static.dir\Debug\ftwinfnt.obj
+         freetype_static.dir\Debug\ftxf86.obj
+         freetype_static.dir\Debug\bdf.obj
+         freetype_static.dir\Debug\cff.obj
+         freetype_static.dir\Debug\type1cid.obj
+         freetype_static.dir\Debug\pcf.obj
+         freetype_static.dir\Debug\pfr.obj
+         freetype_static.dir\Debug\sfnt.obj
+         freetype_static.dir\Debug\truetype.obj
+         freetype_static.dir\Debug\type1.obj
+         freetype_static.dir\Debug\type42.obj
+         freetype_static.dir\Debug\winfnt.obj
+         freetype_static.dir\Debug\raster.obj
+         freetype_static.dir\Debug\smooth.obj
+         freetype_static.dir\Debug\autofit.obj
+         freetype_static.dir\Debug\ftcache.obj
+         freetype_static.dir\Debug\ftgzip.obj
+         freetype_static.dir\Debug\ftlzw.obj
+         freetype_static.dir\Debug\gxvalid.obj
+         freetype_static.dir\Debug\otvalid.obj
+         freetype_static.dir\Debug\psaux.obj
+         freetype_static.dir\Debug\pshinter.obj
+         freetype_static.dir\Debug\psnames.obj
+         freetype_static.vcxproj -> E:\project\DX11_Text\3part\freetype-2.4.4\CEGUI-BUILD\../../../Debug\freetype_d.lib
+     1>已完成生成项目“E:\project\DX11_Text\3part\freetype-2.4.4\CEGUI-BUILD\freetype_static.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.17

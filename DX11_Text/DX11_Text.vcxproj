@@ -54,13 +54,14 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\3part\freetype-2.4.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4005;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>d3d11.lib;d3dx11.lib;dxerr.lib;Effects11d.lib;D3DCompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d11.lib;d3dx11.lib;dxerr.lib;Effects11d.lib;D3DCompiler.lib;freetype_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -98,6 +99,7 @@
     <ClInclude Include="Demo\DX11FontDemo.h" />
     <ClInclude Include="Demo\DX11CubeDemo.h" />
     <ClInclude Include="Demo\DX113DBase.h" />
+    <ClInclude Include="Demo\DX11FreeTypeFontDemo.h" />
     <ClInclude Include="DX11_Text.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ResourceProvider\mtlLoader.h" />
@@ -134,6 +136,7 @@
     <ClCompile Include="Demo\DX11FontDemo.cpp" />
     <ClCompile Include="Demo\DX11CubeDemo.cpp" />
     <ClCompile Include="Demo\DX113DBase.cpp" />
+    <ClCompile Include="Demo\DX11FreeTypeFontDemo.cpp" />
     <ClCompile Include="DX11_Text.cpp" />
     <ClCompile Include="ResourceProvider\mtlLoader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -189,6 +192,11 @@
       <FileType>Document</FileType>
     </None>
     <None Include="Shader\Light.fx">
+      <FileType>Document</FileType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shader\DX11MapDemo.fx">
       <FileType>Document</FileType>
     </None>
   </ItemGroup>

@@ -23,6 +23,7 @@ private:
 
 	ID3D11ShaderResourceView* colorMap_;
 	ID3D11ShaderResourceView* secondMap_;
+	ID3D11ShaderResourceView* clipMap_;
 	ID3D11SamplerState* colorMapSampler_;
 
 	ID3D11Buffer* viewCB_;

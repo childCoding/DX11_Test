@@ -1,0 +1,144 @@
+﻿生成启动时间为 2016/1/11 22:58:06。
+     1>项目“E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\CEGUI-BUILD\freetype.vcxproj”在节点 8 上(Build 个目标)。
+     1>CustomBuild:
+         Building Custom Rule E:/BaiduYunDownload/CEGUI/cegui-deps-0.8.x-src/src/freetype-2.4.4/CEGUI-BUILD/CMakeLists.txt
+         CMake does not need to re-run because E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\CEGUI-BUILD\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\CEGUI-BUILD\..\include" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D FT2_BUILD_LIBRARY /D _CRT_SECURE_NO_WARNINGS /D "CMAKE_INTDIR=\"Release\"" /D freetype_EXPORTS /D _WINDLL /D _MBCS /Gm- /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"freetype.dir\Release\\" /Fd"freetype.dir\Release\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftsystem.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftinit.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftdebug.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftbase.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftbbox.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftglyph.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftbdf.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftbitmap.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftcid.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftfstype.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftgasp.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftgxval.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftlcdfil.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftmm.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftotval.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftpatent.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftpfr.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftstroke.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftsynth.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\fttype1.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftwinfnt.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\base\ftxf86.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\bdf\bdf.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\cff\cff.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\cid\type1cid.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\pcf\pcf.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\pfr\pfr.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\sfnt\sfnt.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\truetype\truetype.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\type1\type1.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\type42\type42.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\winfonts\winfnt.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\raster\raster.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\smooth\smooth.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\autofit\autofit.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\cache\ftcache.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\gzip\ftgzip.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\lzw\ftlzw.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\gxvalid\gxvalid.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\otvalid\otvalid.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\psaux\psaux.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\pshinter\pshinter.c" "E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\src\psnames\psnames.c"
+         ftsystem.c
+         ftinit.c
+         ftdebug.c
+         ftbase.c
+         ftbbox.c
+         ftglyph.c
+         ftbdf.c
+         ftbitmap.c
+         ftcid.c
+         ftfstype.c
+         ftgasp.c
+         ftgxval.c
+         ftlcdfil.c
+         ftmm.c
+         ftotval.c
+         ftpatent.c
+         ftpfr.c
+         ftstroke.c
+         ftsynth.c
+         fttype1.c
+         正在生成代码...
+         正在编译...
+         ftwinfnt.c
+         ftxf86.c
+         bdf.c
+         cff.c
+         type1cid.c
+         pcf.c
+         pfr.c
+         sfnt.c
+         truetype.c
+         type1.c
+         type42.c
+         winfnt.c
+         raster.c
+         smooth.c
+         autofit.c
+         ftcache.c
+         ftgzip.c
+         ftlzw.c
+         gxvalid.c
+         otvalid.c
+         正在生成代码...
+         正在编译...
+         psaux.c
+         pshinter.c
+         psnames.c
+         正在生成代码...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\dependencies\bin\freetype.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"E:/BaiduYunDownload/CEGUI/cegui-deps-0.8.x-src/dependencies/bin/freetype.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:/BaiduYunDownload/CEGUI/cegui-deps-0.8.x-src/dependencies/lib/dynamic/freetype.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /DLL freetype.dir\Release\ftsystem.obj
+         freetype.dir\Release\ftinit.obj
+         freetype.dir\Release\ftdebug.obj
+         freetype.dir\Release\ftbase.obj
+         freetype.dir\Release\ftbbox.obj
+         freetype.dir\Release\ftglyph.obj
+         freetype.dir\Release\ftbdf.obj
+         freetype.dir\Release\ftbitmap.obj
+         freetype.dir\Release\ftcid.obj
+         freetype.dir\Release\ftfstype.obj
+         freetype.dir\Release\ftgasp.obj
+         freetype.dir\Release\ftgxval.obj
+         freetype.dir\Release\ftlcdfil.obj
+         freetype.dir\Release\ftmm.obj
+         freetype.dir\Release\ftotval.obj
+         freetype.dir\Release\ftpatent.obj
+         freetype.dir\Release\ftpfr.obj
+         freetype.dir\Release\ftstroke.obj
+         freetype.dir\Release\ftsynth.obj
+         freetype.dir\Release\fttype1.obj
+         freetype.dir\Release\ftwinfnt.obj
+         freetype.dir\Release\ftxf86.obj
+         freetype.dir\Release\bdf.obj
+         freetype.dir\Release\cff.obj
+         freetype.dir\Release\type1cid.obj
+         freetype.dir\Release\pcf.obj
+         freetype.dir\Release\pfr.obj
+         freetype.dir\Release\sfnt.obj
+         freetype.dir\Release\truetype.obj
+         freetype.dir\Release\type1.obj
+         freetype.dir\Release\type42.obj
+         freetype.dir\Release\winfnt.obj
+         freetype.dir\Release\raster.obj
+         freetype.dir\Release\smooth.obj
+         freetype.dir\Release\autofit.obj
+         freetype.dir\Release\ftcache.obj
+         freetype.dir\Release\ftgzip.obj
+         freetype.dir\Release\ftlzw.obj
+         freetype.dir\Release\gxvalid.obj
+         freetype.dir\Release\otvalid.obj
+         freetype.dir\Release\psaux.obj
+         freetype.dir\Release\pshinter.obj
+         freetype.dir\Release\psnames.obj
+            正在创建库 E:/BaiduYunDownload/CEGUI/cegui-deps-0.8.x-src/dependencies/lib/dynamic/freetype.lib 和对象 E:/BaiduYunDownload/CEGUI/cegui-deps-0.8.x-src/dependencies/lib/dynamic/freetype.exp
+         freetype.vcxproj -> E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\dependencies\bin\freetype.dll
+       PostBuildEvent:
+         setlocal
+         E:\BaiduYunDownload\cmake-3.3.0-win32-x86\bin\cmake.exe -E copy_directory E:/BaiduYunDownload/CEGUI/cegui-deps-0.8.x-src/src/freetype-2.4.4/CEGUI-BUILD/../include/ E:/BaiduYunDownload/CEGUI/cegui-deps-0.8.x-src/dependencies/include
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         setlocal
+         E:\BaiduYunDownload\cmake-3.3.0-win32-x86\bin\cmake.exe -E copy E:/BaiduYunDownload/CEGUI/cegui-deps-0.8.x-src/src/freetype-2.4.4/CEGUI-BUILD/../docs/LICENSE.TXT E:/BaiduYunDownload/CEGUI/cegui-deps-0.8.x-src/dependencies/freetype-license.txt
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         setlocal
+         E:\BaiduYunDownload\cmake-3.3.0-win32-x86\bin\cmake.exe -E copy E:/BaiduYunDownload/CEGUI/cegui-deps-0.8.x-src/src/freetype-2.4.4/CEGUI-BUILD/../docs/FTL.TXT E:/BaiduYunDownload/CEGUI/cegui-deps-0.8.x-src/dependencies/FTL.TXT
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         setlocal
+         E:\BaiduYunDownload\cmake-3.3.0-win32-x86\bin\cmake.exe -E copy E:/BaiduYunDownload/CEGUI/cegui-deps-0.8.x-src/src/freetype-2.4.4/CEGUI-BUILD/../docs/GPL.TXT E:/BaiduYunDownload/CEGUI/cegui-deps-0.8.x-src/dependencies/GPL.TXT
+         if %errorlevel% neq 0 goto :cmEnd
+         :cmEnd
+         endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+         :cmErrorLevel
+         exit /b %1
+         :cmDone
+         if %errorlevel% neq 0 goto :VCEnd
+         :VCEnd
+     1>已完成生成项目“E:\BaiduYunDownload\CEGUI\cegui-deps-0.8.x-src\src\freetype-2.4.4\CEGUI-BUILD\freetype.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:15.90
