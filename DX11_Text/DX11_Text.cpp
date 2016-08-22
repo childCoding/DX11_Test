@@ -13,6 +13,7 @@
 #include "demo/DX11CubeEffectDemo.h"
 #include "demo/DX11ModelDemo.h"
 #include "Demo/DX11NormalMappingDemo.h"
+#include "Demo/DX11FreeTypeFontDemo.h"
 
 #define MAX_LOADSTRING 100
 
@@ -50,7 +51,8 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	{
 		return FALSE;
 	}
-	g_dxBase = new DX11CubeDemo();
+	g_dxBase = new DX11ModelDemo();
+	//g_dxBase = new DX11FreeTypeFontDemo("E:/BaiduYunDownload/CEGUI/cegui-0.8.4/datafiles/fonts/msyh.ttf");
 	if (!g_dxBase->Initialize(hInstance,hwnd))
 	{
 		return FALSE;

@@ -165,14 +165,14 @@ void DX11FontDemo::Render()
 	D3D11DeviceContext_->PSSetShaderResources(0,1,&colorMap_);
 	D3D11DeviceContext_->PSSetSamplers(0,1,&colorMapSampler_);
 
-	DrawString("1234567",-0.2f,0.0f);
+
 	
 
 	DXGISwapChain_->Present(0,0);
 }
 void DX11FontDemo::Update(float dtime)
 {
-
+		DrawString("1234567",-0.2f,0.0f);
 }
 
 bool DX11FontDemo::DrawString(char* str,float startX,float startY)

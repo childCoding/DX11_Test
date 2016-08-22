@@ -1,9 +1,12 @@
 #pragma once
 #include "DX11Base.h"
+//#include "DX11FreeTypeFontDemo.h"
 
 class DX11FontDemo :
 	public DX11Base
 {
+	//friend class DX11FreeTypeFontDemo;
+protected: 
 	struct Vertex
 	{
 		XMFLOAT3 pos;
@@ -19,8 +22,10 @@ public:
 	virtual void Render() ;
 	virtual void Update(float dtime) ;
 
-	bool DrawString(char* str,float x,float y);
-private: 
+	virtual bool DrawString(char* str,float x,float y);
+
+protected: 
+
 	ID3D11VertexShader* vertexShader_;
 	ID3D11PixelShader* pixelShader_;
 	ID3D11InputLayout* inputLayout_;
