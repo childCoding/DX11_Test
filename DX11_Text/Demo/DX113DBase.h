@@ -21,7 +21,7 @@ public:
 	virtual void OnMouseDown(WPARAM btnState, int x, int y);
 	virtual void OnMouseUp(WPARAM btnState, int x, int y);
 	virtual void OnMouseMove(WPARAM btnState, int x, int y);
-	virtual void OnMouseWheel(WPARAM btnState, int x, int y){}
+	virtual void OnMouseWheel(WPARAM btnState, int x, int y);
 protected:
 	ID3D11Texture2D* D3D11Texture2d_;
 	ID3D11DepthStencilView* depthview_;

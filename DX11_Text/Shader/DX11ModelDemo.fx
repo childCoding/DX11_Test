@@ -38,7 +38,7 @@ float4 PS_Main( PS_Input frag ) : SV_TARGET
 {
 	
 	float4 col = colorMap_.Sample( colorSampler_, frag.tex0 );
-	clip(col.a-0.1f);  
+	clip(col.a-0.2f);  
 	return col ;
 	/*
 	float4 col = colorMap_.Sample( colorSampler_, frag.tex0 );

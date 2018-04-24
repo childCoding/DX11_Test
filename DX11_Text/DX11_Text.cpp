@@ -19,9 +19,11 @@
 
 // 全局变量:
 HINSTANCE hInst;								// 当前实例
+HWND hWnd;
 TCHAR szTitle[MAX_LOADSTRING];					// 标题栏文本
 TCHAR szWindowClass[MAX_LOADSTRING];			// 主窗口类名
 DX11Base* g_dxBase;
+
 // 此代码模块中包含的函数的前向声明:
 ATOM				MyRegisterClass(HINSTANCE hInstance);
 HWND				InitInstance(HINSTANCE, int);
@@ -51,8 +53,9 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	{
 		return FALSE;
 	}
-	g_dxBase = new DX11ModelDemo();
+	//g_dxBase = new DX11ModelDemo();
 	//g_dxBase = new DX11FreeTypeFontDemo("E:/BaiduYunDownload/CEGUI/cegui-0.8.4/datafiles/fonts/msyh.ttf");
+	g_dxBase =  new DX11MapDemo();
 	if (!g_dxBase->Initialize(hInstance,hwnd))
 	{
 		return FALSE;
@@ -122,7 +125,7 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 //
 HWND InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
-   HWND hWnd;
+   //HWND hWnd;
 
    hInst = hInstance; // 将实例句柄存储在全局变量中
 
@@ -170,14 +173,63 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case IDM_EXIT:
 			DestroyWindow(hWnd);
 			break;
-		case IDM_TRIANGLE:
+		//case IDM_TRIANGLE:
+		//	g_dxBase->ShutDown();
+		//	delete  g_dxBase;
+		//	g_dxBase = new DX11MapDemo();
+		//	g_dxBase->Initialize(hInst,hWnd);
+		//	break;
+		case IDM_MODEL:
+			g_dxBase->ShutDown();
+			delete  g_dxBase;
+			g_dxBase = new DX11ModelDemo();
+			g_dxBase->Initialize(hInst,hWnd);
+			break;
+		case IDM_MAP:
+			g_dxBase->ShutDown();
+			delete  g_dxBase;
+			g_dxBase = new DX11MapDemo();
+			g_dxBase->Initialize(hInst,hWnd);
+			break;
+		case IDM_CUBE:
+			g_dxBase->ShutDown();
+			delete  g_dxBase;
+			g_dxBase = new DX11CubeDemo();
+			g_dxBase->Initialize(hInst,hWnd);
+			break;
+		case IDM_CUBEEFFECT:
+			g_dxBase->ShutDown();
+			delete  g_dxBase;
+			g_dxBase = new DX11CubeEffectDemo();
+			g_dxBase->Initialize(hInst,hWnd);
 			break;
 		case IDM_TEXTURE:
+			g_dxBase->ShutDown();
+			delete  g_dxBase;
+			g_dxBase = new DX11TexDemo();
+			g_dxBase->Initialize(hInst,hWnd);
+
 			break;
 		case IDM_SPRITE:
+			g_dxBase->ShutDown();
+			delete  g_dxBase;
+			g_dxBase = new DX11SpriteDemo();
+			g_dxBase->Initialize(hInst,hWnd);
+
 			break;
 		case IDM_FONT:
+			g_dxBase->ShutDown();
+			delete  g_dxBase;
+			g_dxBase = new DX11FontDemo();
+			g_dxBase->Initialize(hInst,hWnd);
 			break;
+		case IDM_FREETYPEFONT:
+			g_dxBase->ShutDown();
+			delete  g_dxBase;
+			g_dxBase = new DX11FreeTypeFontDemo("E:/BaiduYunDownload/CEGUI/cegui-0.8.4/datafiles/fonts/msyh.ttf");
+			g_dxBase->Initialize(hInst,hWnd);
+			break;
+
 		default:
 			return DefWindowProc(hWnd, message, wParam, lParam);
 		}

@@ -63,8 +63,8 @@ bool DX11ModelDemo::LoadContent()
 
 	m_radius = 200;
 	//加载模型数据
-	//model_ = new ObjModel(new ModelObj("..\\model\\XJC\\model.obj"),D3D11Device_);		//树
-	model_ = new ObjModel(new ModelObj("..\\model\\09\\saloon.obj"),D3D11Device_);	//汽车
+	model_ = new ObjModel(new ModelObj("..\\model\\XJC\\model.obj"),D3D11Device_);		//树
+	//model_ = new ObjModel(new ModelObj("..\\model\\09\\saloon.obj"),D3D11Device_);	//汽车
 
 	
 	D3D11_SAMPLER_DESC mapDesc;

@@ -176,7 +176,7 @@ void DX113DBase::Update(float dtime)
 	//viewMatrix = XMMatrixTranspose(viewMatrix);
 	XMStoreFloat4x4(&viewMatrix_,viewMatrix);
 
-	XMMATRIX projMatrix = XMMatrixPerspectiveFovLH(XM_PIDIV4,1.f*GetClientWidth()/GetClientHeight(),1.f,1000.f);
+	XMMATRIX projMatrix = XMMatrixPerspectiveFovLH(XM_PIDIV4,1.f*GetClientWidth()/GetClientHeight(),1.f,10000.f);
 	//projMatrix = XMMatrixTranspose(projMatrix);
 	XMStoreFloat4x4(&projMatrix_,projMatrix);
 
@@ -216,4 +216,8 @@ void DX113DBase::OnMouseMove(WPARAM btnState, int x, int y)
 
 	m_lastPos.x = x;
 	m_lastPos.y = y;
+}
+void DX113DBase::OnMouseWheel(WPARAM btnState, int x, int y)
+{
+
 }
