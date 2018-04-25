@@ -25,7 +25,7 @@ bool DX11CubeDemo::LoadContent()
 {
 	//加载定点着色器
 	ID3DBlob* vsBuffer = 0;
-	bool compileResult = CompileD3DShader( "Shader/DX11CubeDemo.fx", "VS_Main", "vs_4_0", &vsBuffer );
+	bool compileResult = CompileD3DShader( "../Resources/Shader/DX11CubeDemo.fx", "VS_Main", "vs_4_0", &vsBuffer );
 	if( compileResult == false )
 	{
 		MessageBox( 0, "Error loading vertex shader!", "Compile Error", MB_OK );
@@ -60,7 +60,7 @@ bool DX11CubeDemo::LoadContent()
 
 	//加载像素着色器
 	ID3DBlob* psBuffer = 0;
-	compileResult = CompileD3DShader( "Shader/DX11CubeDemo.fx", "PS_Main", "ps_4_0", &psBuffer );
+	compileResult = CompileD3DShader( "../Resources/Shader/DX11CubeDemo.fx", "PS_Main", "ps_4_0", &psBuffer );
 	if( compileResult == false )
 	{
 		MessageBox( 0, "Error loading pixel shader!", "Compile Error", MB_OK );
@@ -144,14 +144,14 @@ bool DX11CubeDemo::LoadContent()
 	}
 	
 	//加载贴图
-	d3dResult = D3DX11CreateShaderResourceViewFromFile( D3D11Device_, "img/tex.dds", 0, 0, &colorMap_, 0 );
+	d3dResult = D3DX11CreateShaderResourceViewFromFile( D3D11Device_, "../Resources/img/tex.dds", 0, 0, &colorMap_, 0 );
 	if( FAILED( d3dResult ) )
 	{
 		DXTRACE_MSG( "Failed to load the texture image!" );
 		return false;
 	}
 	//加载贴图
-	d3dResult = D3DX11CreateShaderResourceViewFromFile( D3D11Device_, "img/head.dds", 0, 0, &secondMap_, 0 );
+	d3dResult = D3DX11CreateShaderResourceViewFromFile( D3D11Device_, "../Resources/img/head.dds", 0, 0, &secondMap_, 0 );
 	if( FAILED( d3dResult ) )
 	{
 		DXTRACE_MSG( "Failed to load the texture image!" );
@@ -159,7 +159,7 @@ bool DX11CubeDemo::LoadContent()
 	}
 
 	//加载贴图
-	d3dResult = D3DX11CreateShaderResourceViewFromFile( D3D11Device_, "img/bound.dds", 0, 0, &clipMap_, 0 );
+	d3dResult = D3DX11CreateShaderResourceViewFromFile( D3D11Device_, "../Resources/img/bound.dds", 0, 0, &clipMap_, 0 );
 	if( FAILED( d3dResult ) )
 	{
 		DXTRACE_MSG( "Failed to load the texture image!" );

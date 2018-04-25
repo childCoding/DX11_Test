@@ -1,23 +1,8 @@
 #pragma once
-#include "dx11base.h"
-class Sprite
-{
-public:
-	Sprite();
-	~Sprite();
-	XMMATRIX GetWorldMatrix();
-
-	void SetPosition(XMFLOAT2& pos);
-	void SetRotation(float rot);
-	void SetScale(XMFLOAT2& scale);
-private:
-	XMFLOAT2 m_pos;
-	float m_rotation;
-	XMFLOAT2 m_scale;
-};
+#include "../dx11base.h"
 
 
-class DX11SpriteDemo :
+class DX11TexDemo :
 	public DX11Base
 {
 	struct Vertex
@@ -26,8 +11,9 @@ class DX11SpriteDemo :
 		XMFLOAT2 tex;
 	};
 public:
-	DX11SpriteDemo(void);
-	~DX11SpriteDemo(void);
+	DX11TexDemo(void);
+	~DX11TexDemo(void);
+
 
 	virtual bool LoadContent();
 	virtual void UnloadContent();
@@ -44,10 +30,5 @@ private:
 
 	ID3D11ShaderResourceView* colorMap_;
 	ID3D11SamplerState* colorMapSampler_;
-
-	Sprite sprites_[2];
-	ID3D11BlendState* blendState_;
-	ID3D11Buffer* mvpBuffer_;
-	XMMATRIX vpMatrix_;
 };
 

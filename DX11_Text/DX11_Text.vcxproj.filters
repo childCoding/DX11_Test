@@ -51,38 +51,11 @@
     <ClInclude Include="Demo\DX11Demo.h">
       <Filter>Demo</Filter>
     </ClInclude>
-    <ClInclude Include="Demo\DX11FontDemo.h">
-      <Filter>Demo</Filter>
-    </ClInclude>
-    <ClInclude Include="Demo\DX11FreeTypeFontDemo.h">
-      <Filter>Demo</Filter>
-    </ClInclude>
-    <ClInclude Include="Demo\DX11MapDemo.h">
-      <Filter>Demo</Filter>
-    </ClInclude>
-    <ClInclude Include="Demo\DX11ModelDemo.h">
-      <Filter>Demo</Filter>
-    </ClInclude>
-    <ClInclude Include="Demo\DX11NormalMappingDemo.h">
-      <Filter>Demo</Filter>
-    </ClInclude>
-    <ClInclude Include="Demo\DX11SpriteDemo.h">
-      <Filter>Demo</Filter>
-    </ClInclude>
-    <ClInclude Include="Demo\DX11TexDemo.h">
-      <Filter>Demo</Filter>
-    </ClInclude>
     <ClInclude Include="Common\Lights.h">
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="Common\GeometryGens.h">
       <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="Demo\DX11CubeDemo.h">
-      <Filter>Demo</Filter>
-    </ClInclude>
-    <ClInclude Include="Demo\DX11CubeEffectDemo.h">
-      <Filter>Demo</Filter>
     </ClInclude>
     <ClInclude Include="ResourceProvider\objModel.h">
       <Filter>ResourceProvider</Filter>
@@ -95,6 +68,36 @@
     </ClInclude>
     <ClInclude Include="Demo\DX11Camera.h">
       <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\ModulDemo\DX11CubeEffectDemo.h">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\ModulDemo\DX11CubeDemo.h">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\TexDemo\DX11FontDemo.h">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\TexDemo\DX11FreeTypeFontDemo.h">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\TexDemo\DX11MapDemo.h">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\TexDemo\DX11SpriteDemo.h">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\TexDemo\DX11TexDemo.h">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\ModulDemo\DX11ModelDemo.h">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\ShaderDemo\DX11NormalMappingDemo.h">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\ShaderDemo\DX11Light.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -110,34 +113,7 @@
     <ClCompile Include="Demo\DX11Base.cpp">
       <Filter>Demo</Filter>
     </ClCompile>
-    <ClCompile Include="Demo\DX11CubeDemo.cpp">
-      <Filter>Demo</Filter>
-    </ClCompile>
-    <ClCompile Include="Demo\DX11CubeEffectDemo.cpp">
-      <Filter>Demo</Filter>
-    </ClCompile>
     <ClCompile Include="Demo\DX11Demo.cpp">
-      <Filter>Demo</Filter>
-    </ClCompile>
-    <ClCompile Include="Demo\DX11FontDemo.cpp">
-      <Filter>Demo</Filter>
-    </ClCompile>
-    <ClCompile Include="Demo\DX11FreeTypeFontDemo.cpp">
-      <Filter>Demo</Filter>
-    </ClCompile>
-    <ClCompile Include="Demo\DX11MapDemo.cpp">
-      <Filter>Demo</Filter>
-    </ClCompile>
-    <ClCompile Include="Demo\DX11ModelDemo.cpp">
-      <Filter>Demo</Filter>
-    </ClCompile>
-    <ClCompile Include="Demo\DX11NormalMappingDemo.cpp">
-      <Filter>Demo</Filter>
-    </ClCompile>
-    <ClCompile Include="Demo\DX11SpriteDemo.cpp">
-      <Filter>Demo</Filter>
-    </ClCompile>
-    <ClCompile Include="Demo\DX11TexDemo.cpp">
       <Filter>Demo</Filter>
     </ClCompile>
     <ClCompile Include="Common\GeometryGens.cpp">
@@ -154,6 +130,36 @@
     </ClCompile>
     <ClCompile Include="Demo\DX11Camera.cpp">
       <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\ModulDemo\DX11CubeDemo.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\ModulDemo\DX11CubeEffectDemo.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\TexDemo\DX11FontDemo.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\TexDemo\DX11FreeTypeFontDemo.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\TexDemo\DX11MapDemo.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\TexDemo\DX11SpriteDemo.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\TexDemo\DX11TexDemo.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\ModulDemo\DX11ModelDemo.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\ShaderDemo\DX11NormalMappingDemo.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\ShaderDemo\DX11Light.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

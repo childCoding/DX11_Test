@@ -1,5 +1,5 @@
 #pragma once
-#include "dx11base.h"
+#include "../dx11base.h"
 
 
 class DX11MapDemo :

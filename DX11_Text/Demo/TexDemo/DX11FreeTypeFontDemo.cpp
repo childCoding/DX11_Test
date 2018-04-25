@@ -143,7 +143,7 @@ void DX11FreeTypeFontDemo::creatTextureFromFont(wchar_t* str)
 	desc.Texture2D.MostDetailedMip = 0;
 	desc.Texture2D.MipLevels = 1;
 	HRESULT d3dResult = D3D11Device_->CreateShaderResourceView(fonttex_,0,&colorMap_);
-	//HRESULT d3dResult = D3DX11CreateShaderResourceViewFromFile(D3D11Device_,"img/1002.map.dds",0,0,&colorMap_,0);
+	//HRESULT d3dResult = D3DX11CreateShaderResourceViewFromFile(D3D11Device_,"../Resources/img/1002.map.dds",0,0,&colorMap_,0);
 
 	if (FAILED(d3dResult))
 	{
@@ -183,7 +183,7 @@ bool DX11FreeTypeFontDemo::LoadContent()
 {
 	//加载定点着色器
 	ID3DBlob* vsBuffer = 0;
-	bool compileResult = CompileD3DShader( "Shader/DX11TexDemo.fx", "VS_Main", "vs_4_0", &vsBuffer );
+	bool compileResult = CompileD3DShader( "../Resources/Shader/DX11TexDemo.fx", "VS_Main", "vs_4_0", &vsBuffer );
 	if( compileResult == false )
 	{
 		MessageBox( 0, "Error loading vertex shader!", "Compile Error", MB_OK );
@@ -218,7 +218,7 @@ bool DX11FreeTypeFontDemo::LoadContent()
 
 	//加载像素着色器
 	ID3DBlob* psBuffer = 0;
-	compileResult = CompileD3DShader( "Shader/DX11TexDemo.fx", "PS_Main", "ps_4_0", &psBuffer );
+	compileResult = CompileD3DShader( "../Resources/Shader/DX11TexDemo.fx", "PS_Main", "ps_4_0", &psBuffer );
 	if( compileResult == false )
 	{
 		MessageBox( 0, "Error loading pixel shader!", "Compile Error", MB_OK );

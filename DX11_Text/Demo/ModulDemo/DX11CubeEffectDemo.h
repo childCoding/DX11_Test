@@ -1,13 +1,12 @@
 #pragma once
-#include "dx113dbase.h"
-#include "../ResourceProvider/objModel.h"
-
-class DX11ModelDemo :
+#include "../dx113dbase.h"
+class DX11CubeEffectDemo :
 	public DX113DBase
 {
 public:
-	DX11ModelDemo(void);
-	~DX11ModelDemo(void);
+	DX11CubeEffectDemo(void);
+	~DX11CubeEffectDemo(void);
+
 public:
 
 	virtual bool LoadContent();
@@ -21,8 +20,12 @@ private:
 
 	ID3D11InputLayout* inputLayout_;
 
+	ID3D11Buffer* vertexBuffer_;
+	ID3D11Buffer* indexBuffer_;
+
+	ID3D11ShaderResourceView* colorMap_;
+	ID3D11ShaderResourceView* secondMap_;
 	ID3D11SamplerState* colorMapSampler_;
 
-	ObjModel* model_;
 };
 

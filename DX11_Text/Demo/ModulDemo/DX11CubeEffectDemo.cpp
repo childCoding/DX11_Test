@@ -19,7 +19,7 @@ bool DX11CubeEffectDemo::LoadContent()
 {
 	//加载定点着色器
 	ID3DBlob* vsBuffer = 0;
-	bool compileResult = CompileD3DShader( "Shader/DX11CubeEffectDemo.fx", 0, "fx_5_0", &vsBuffer );
+	bool compileResult = CompileD3DShader( "../Resources/Shader/DX11CubeEffectDemo.fx", 0, "fx_5_0", &vsBuffer );
 	if( compileResult == false )
 	{
 		MessageBox( 0, "Error loading vertex shader!", "Compile Error", MB_OK );
@@ -133,14 +133,14 @@ bool DX11CubeEffectDemo::LoadContent()
 	}
 
 	//加载贴图
-	d3dResult = D3DX11CreateShaderResourceViewFromFile( D3D11Device_, "img/tex.dds", 0, 0, &colorMap_, 0 );
+	d3dResult = D3DX11CreateShaderResourceViewFromFile( D3D11Device_, "../Resources/img/tex.dds", 0, 0, &colorMap_, 0 );
 	if( FAILED( d3dResult ) )
 	{
 		DXTRACE_MSG( "Failed to load the texture image!" );
 		return false;
 	}
 	//加载贴图
-	d3dResult = D3DX11CreateShaderResourceViewFromFile( D3D11Device_, "img/heart.dds", 0, 0, &secondMap_, 0 );
+	d3dResult = D3DX11CreateShaderResourceViewFromFile( D3D11Device_, "../Resources/img/heart.dds", 0, 0, &secondMap_, 0 );
 	if( FAILED( d3dResult ) )
 	{
 		DXTRACE_MSG( "Failed to load the texture image!" );

@@ -1,20 +1,11 @@
 #pragma once
-#include "DX11Base.h"
-//#include "DX11FreeTypeFontDemo.h"
-
-class DX11FontDemo :
-	public DX11Base
+#include "../dx113Dbase.h"
+class DX11CubeDemo :
+	public DX113DBase
 {
-	//friend class DX11FreeTypeFontDemo;
-protected: 
-	struct Vertex
-	{
-		XMFLOAT3 pos;
-		XMFLOAT2 tex;
-	};
 public:
-	DX11FontDemo(void);
-	~DX11FontDemo(void);
+	DX11CubeDemo(void);
+	~DX11CubeDemo(void);
 
 	virtual bool LoadContent();
 	virtual void UnloadContent();
@@ -22,18 +13,23 @@ public:
 	virtual void Render() ;
 	virtual void Update(float dtime) ;
 
-	virtual bool DrawString(char* str,float x,float y);
-
-protected: 
-
+private: 
 	ID3D11VertexShader* vertexShader_;
 	ID3D11PixelShader* pixelShader_;
+
 	ID3D11InputLayout* inputLayout_;
 	ID3D11Buffer* vertexBuffer_;
+	ID3D11Buffer* indexBuffer_;
 
 	ID3D11ShaderResourceView* colorMap_;
+	ID3D11ShaderResourceView* secondMap_;
+	ID3D11ShaderResourceView* clipMap_;
 	ID3D11SamplerState* colorMapSampler_;
 
-	ID3D11BlendState* blendState_;
+	ID3D11Buffer* viewCB_;
+	ID3D11Buffer* projCB_;
+	ID3D11Buffer* worldCB_;
+
+	
 };
 

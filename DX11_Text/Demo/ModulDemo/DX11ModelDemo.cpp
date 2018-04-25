@@ -17,7 +17,7 @@ bool DX11ModelDemo::LoadContent()
 {
 	//加载定点着色器
 	ID3DBlob* vsBuffer = 0;
-	bool compileResult = CompileD3DShader( "Shader/DX11ModelDemo.fx", 0, "fx_5_0", &vsBuffer );
+	bool compileResult = CompileD3DShader( "../Resources/Shader/DX11ModelDemo.fx", 0, "fx_5_0", &vsBuffer );
 	if( compileResult == false )
 	{
 		MessageBox( 0, "Error loading vertex shader!", "Compile Error", MB_OK );

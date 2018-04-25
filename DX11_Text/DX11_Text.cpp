@@ -5,15 +5,19 @@
 #include <windowsX.h>
 #include "DX11_Text.h"
 #include "Demo/DX11Demo.h"
-#include "Demo/DX11MapDemo.h"
-#include "Demo/DX11TexDemo.h"
-#include "Demo/DX11SpriteDemo.h"
-#include "Demo/DX11FontDemo.h"
-#include "Demo/DX11CubeDemo.h"
-#include "demo/DX11CubeEffectDemo.h"
-#include "demo/DX11ModelDemo.h"
-#include "Demo/DX11NormalMappingDemo.h"
-#include "Demo/DX11FreeTypeFontDemo.h"
+
+#include "Demo/TexDemo/DX11MapDemo.h"
+#include "Demo/TexDemo/DX11TexDemo.h"
+#include "Demo/TexDemo/DX11SpriteDemo.h"
+#include "Demo/TexDemo/DX11FontDemo.h"
+#include "Demo/TexDemo/DX11FreeTypeFontDemo.h"
+
+#include "Demo/ModulDemo/DX11CubeDemo.h"
+#include "Demo/ModulDemo/DX11CubeEffectDemo.h"
+#include "Demo/ModulDemo/DX11ModelDemo.h"
+
+#include "Demo/ShaderDemo/DX11NormalMappingDemo.h"
+
 
 #define MAX_LOADSTRING 100
 
@@ -55,7 +59,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	}
 	//g_dxBase = new DX11ModelDemo();
 	//g_dxBase = new DX11FreeTypeFontDemo("E:/BaiduYunDownload/CEGUI/cegui-0.8.4/datafiles/fonts/msyh.ttf");
-	g_dxBase =  new DX11MapDemo();
+	g_dxBase =  new DX11Demo();
 	if (!g_dxBase->Initialize(hInstance,hwnd))
 	{
 		return FALSE;

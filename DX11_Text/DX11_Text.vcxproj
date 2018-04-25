@@ -89,17 +89,18 @@
     <ClInclude Include="Common\Lights.h" />
     <ClInclude Include="Demo\DX11Base.h" />
     <ClInclude Include="Demo\DX11Camera.h" />
-    <ClInclude Include="Demo\DX11CubeEffectDemo.h" />
+    <ClInclude Include="Demo\ModulDemo\DX11CubeEffectDemo.h" />
     <ClInclude Include="Demo\DX11Demo.h" />
-    <ClInclude Include="Demo\DX11MapDemo.h" />
-    <ClInclude Include="Demo\DX11ModelDemo.h" />
-    <ClInclude Include="Demo\DX11NormalMappingDemo.h" />
-    <ClInclude Include="Demo\DX11SpriteDemo.h" />
-    <ClInclude Include="Demo\DX11TexDemo.h" />
-    <ClInclude Include="Demo\DX11FontDemo.h" />
-    <ClInclude Include="Demo\DX11CubeDemo.h" />
+    <ClInclude Include="Demo\ShaderDemo\DX11Light.h" />
+    <ClInclude Include="Demo\TexDemo\DX11MapDemo.h" />
+    <ClInclude Include="Demo\ModulDemo\DX11ModelDemo.h" />
+    <ClInclude Include="Demo\ShaderDemo\DX11NormalMappingDemo.h" />
+    <ClInclude Include="Demo\TexDemo\DX11SpriteDemo.h" />
+    <ClInclude Include="Demo\TexDemo\DX11TexDemo.h" />
+    <ClInclude Include="Demo\TexDemo\DX11FontDemo.h" />
+    <ClInclude Include="Demo\ModulDemo\DX11CubeDemo.h" />
     <ClInclude Include="Demo\DX113DBase.h" />
-    <ClInclude Include="Demo\DX11FreeTypeFontDemo.h" />
+    <ClInclude Include="Demo\TexDemo\DX11FreeTypeFontDemo.h" />
     <ClInclude Include="DX11_Text.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ResourceProvider\mtlLoader.h" />
@@ -116,27 +117,28 @@
     <ClCompile Include="Demo\DX11Camera.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Demo\DX11CubeEffectDemo.cpp">
+    <ClCompile Include="Demo\ModulDemo\DX11CubeEffectDemo.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Demo\DX11Demo.cpp" />
-    <ClCompile Include="Demo\DX11MapDemo.cpp">
+    <ClCompile Include="Demo\ShaderDemo\DX11Light.cpp" />
+    <ClCompile Include="Demo\TexDemo\DX11MapDemo.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Demo\DX11ModelDemo.cpp">
+    <ClCompile Include="Demo\ModulDemo\DX11ModelDemo.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Demo\DX11NormalMappingDemo.cpp">
+    <ClCompile Include="Demo\ShaderDemo\DX11NormalMappingDemo.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Demo\DX11SpriteDemo.cpp" />
-    <ClCompile Include="Demo\DX11TexDemo.cpp">
+    <ClCompile Include="Demo\TexDemo\DX11SpriteDemo.cpp" />
+    <ClCompile Include="Demo\TexDemo\DX11TexDemo.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Demo\DX11FontDemo.cpp" />
-    <ClCompile Include="Demo\DX11CubeDemo.cpp" />
+    <ClCompile Include="Demo\TexDemo\DX11FontDemo.cpp" />
+    <ClCompile Include="Demo\ModulDemo\DX11CubeDemo.cpp" />
     <ClCompile Include="Demo\DX113DBase.cpp" />
-    <ClCompile Include="Demo\DX11FreeTypeFontDemo.cpp" />
+    <ClCompile Include="Demo\TexDemo\DX11FreeTypeFontDemo.cpp" />
     <ClCompile Include="DX11_Text.cpp" />
     <ClCompile Include="ResourceProvider\mtlLoader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>

@@ -79,7 +79,7 @@ bool DX11NormalMappingDemo::initEffect()
 {
 	//加载定点着色器
 	ID3DBlob* vsBuffer = 0;
-	bool compileResult = CompileD3DShader( "Shader/DX11NormalMappingDemo.fx", 0, "fx_5_0", &vsBuffer );
+	bool compileResult = CompileD3DShader( "../Resources/Shader/DX11NormalMappingDemo.fx", 0, "fx_5_0", &vsBuffer );
 	if( compileResult == false )
 	{
 		MessageBox( 0, "Error loading vertex shader!", "Compile Error", MB_OK );
@@ -100,13 +100,13 @@ bool DX11NormalMappingDemo::initEffect()
 bool DX11NormalMappingDemo::initResourceView()
 {
 	//加载纹理资源
-	HRESULT d3dResult = D3DX11CreateShaderResourceViewFromFile(D3D11Device_,"img/stones.dds",0,0,&m_floorSVR,0);
+	HRESULT d3dResult = D3DX11CreateShaderResourceViewFromFile(D3D11Device_,"../Resources/img/stones.dds",0,0,&m_floorSVR,0);
 	if (FAILED(d3dResult))
 	{
 		DXTRACE_MSG("failed to load texture file!");
 		return false;
 	}
-	d3dResult = D3DX11CreateShaderResourceViewFromFile(D3D11Device_,"img/stones_nmap.dds",0,0,&m_floorN,0);
+	d3dResult = D3DX11CreateShaderResourceViewFromFile(D3D11Device_,"../Resources/img/stones_nmap.dds",0,0,&m_floorN,0);
 	if (FAILED(d3dResult))
 	{
 		DXTRACE_MSG("failed to load texture file!");

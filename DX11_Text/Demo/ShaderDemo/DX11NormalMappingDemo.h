@@ -1,7 +1,7 @@
 #pragma once
-#include "dx113dbase.h"
-#include "../Common/GeometryGens.h"
-#include "../Common/Lights.h"
+#include "../dx113dbase.h"
+#include "../../Common/GeometryGens.h"
+#include "../../Common/Lights.h"
 
 class DX11NormalMappingDemo :
 	public DX113DBase
