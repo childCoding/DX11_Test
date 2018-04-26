@@ -46,7 +46,7 @@ struct MeshData
 class ModelObj {
 private:
 
-
+	MtlObj* mtl; //纹理对象、用于存在纹理数据的集合
 
 public:
 	typedef std::vector<XMFLOAT3>  VecFloat3;
@@ -57,12 +57,14 @@ public:
 	VecFloat3 m_vs,m_vns;
 	VecFloat2 m_vts;
 	std::vector<MeshData> meshs;
-	MtlObj* mtl; //纹理对象、用于存在纹理数据的集合
+
 
 	ModelObj(std::string p);
 	~ModelObj();
 	void readfile();
-	
+public: 
+	int GetMaterialCount(){ return mtl ? mtl->size():0;}
+	string GetTextureByName(string name) {return  mtl ? mtl->getTextureByName(name):"";}
 };
 
 #endif /* OBJLOADER_H_ */

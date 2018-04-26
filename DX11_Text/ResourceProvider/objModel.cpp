@@ -94,10 +94,10 @@ void ObjModel::initVertices() {
 
 void ObjModel::initTextures() {
 	
-	mtlNum = objLoader->mtl->size();
+	mtlNum = objLoader->GetMaterialCount();
 
 	for(auto it:objLoader->meshs) {
-		string texFile = objLoader->mtl->getTextureByName(it.material) ;
+		string texFile = objLoader->GetTextureByName(it.material) ;
 		textures.insert(pair<string,ID3D11ShaderResourceView*>(it.material,nullptr));
 
 		HRESULT d3dResult;

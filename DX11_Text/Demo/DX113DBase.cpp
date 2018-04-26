@@ -221,3 +221,40 @@ void DX113DBase::OnMouseWheel(WPARAM btnState, int x, int y)
 {
 
 }
+
+bool DX113DBase::LoadShader(std::string file)
+{
+	//加载定点着色器
+	ID3DBlob* vsBuffer = 0;
+	bool compileResult = CompileD3DShader((char*)file.c_str(), 0, "fx_5_0", &vsBuffer );
+	if( compileResult == false )
+	{
+		MessageBox( 0, "Error loading vertex shader!", "Compile Error", MB_OK );
+		return false;
+	}
+	HRESULT d3dResult;
+	d3dResult = D3DX11CreateEffectFromMemory(vsBuffer->GetBufferPointer(),vsBuffer->GetBufferSize(),0,D3D11Device_,&effect_);
+	if( FAILED( d3dResult ) )
+	{
+		MessageBox( 0, "Error creating the effect shader!", "Compile Error", MB_OK );
+		if( vsBuffer )
+			vsBuffer->Release( );
+		return false;
+	}
+}
+void DX113DBase::SetEffectMatrix(const char * name, XMMATRIX& val)
+{
+	ID3DX11EffectMatrixVariable* vMatrix = effect_->GetVariableByName( name )->AsMatrix( );
+	vMatrix->SetMatrix( reinterpret_cast<float*>(&val) );
+
+}
+void DX113DBase::SetEffectMatrix(const char * name, XMFLOAT4X4& val)
+{
+	XMMATRIX mat = XMLoadFloat4x4(&val);
+	SetEffectMatrix(name,mat);
+}
+void DX113DBase::SetEffectSampler(const char * name,int index, ID3D11SamplerState* val)
+{
+	ID3DX11EffectSamplerVariable* colorMapSampler = effect_->GetVariableByName(name)->AsSampler( );
+	colorMapSampler->SetSampler(index, val );
+}

@@ -16,8 +16,7 @@ public:
 	virtual void Render() ;
 	virtual void Update(float dtime) ;
 
-private: 
-	ID3DX11Effect* effect_;
+private:
 
 	ID3D11InputLayout* inputLayout_;
 

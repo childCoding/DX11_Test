@@ -67,7 +67,7 @@ bool DX11NormalMappingDemo::initInputLayout()
 	HRESULT d3dResult = D3D11Device_->CreateInputLayout( solidColorLayout,
 		totalLayoutElements,EFFECT_DESC.pBytecode,
 		EFFECT_DESC.BytecodeLength, &inputLayout_ );
-	
+
 	if( FAILED( d3dResult ) )
 	{
 		return false;

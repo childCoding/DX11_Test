@@ -16,33 +16,19 @@ DX11ModelDemo::~DX11ModelDemo(void)
 bool DX11ModelDemo::LoadContent()
 {
 	//加载定点着色器
-	ID3DBlob* vsBuffer = 0;
-	bool compileResult = CompileD3DShader( "../Resources/Shader/DX11ModelDemo.fx", 0, "fx_5_0", &vsBuffer );
-	if( compileResult == false )
+	if(!LoadShader("../Resources/Shader/DX11Light.fx"))
 	{
-		MessageBox( 0, "Error loading vertex shader!", "Compile Error", MB_OK );
-		return false;
-	}
-	HRESULT d3dResult;
-	d3dResult = D3DX11CreateEffectFromMemory(vsBuffer->GetBufferPointer(),vsBuffer->GetBufferSize(),0,D3D11Device_,&effect_);
-	if( FAILED( d3dResult ) )
-	{
-		MessageBox( 0, "Error creating the effect shader!", "Compile Error", MB_OK );
-		if( vsBuffer )
-			vsBuffer->Release( );
 		return false;
 	}
 
 	D3D11_INPUT_ELEMENT_DESC solidColorLayout[] =
 	{
-		{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT,
-		0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
-		{ "TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT,
-		0, 12, D3D11_INPUT_PER_VERTEX_DATA, 0 }
+		{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT,		0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
+		{ "TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT,		0, 12, D3D11_INPUT_PER_VERTEX_DATA, 0 }
 	};
-
 	unsigned int totalLayoutElements = ARRAYSIZE( solidColorLayout );
 
+	ID3DBlob* vsBuffer = 0;
 	ID3DX11EffectTechnique* colorTechnique;
 	colorTechnique = effect_->GetTechniqueByName("ColorShift");
 	ID3DX11EffectPass* colorPass = colorTechnique->GetPassByIndex(0);
@@ -52,7 +38,7 @@ bool DX11ModelDemo::LoadContent()
 	colorPass->GetVertexShaderDesc(&PASS_DESC);
 	PASS_DESC.pShaderVariable->GetShaderDesc(PASS_DESC.ShaderIndex,&EFFECT_DESC);
 
-	d3dResult = D3D11Device_->CreateInputLayout( solidColorLayout,
+	HRESULT d3dResult = D3D11Device_->CreateInputLayout( solidColorLayout,
 		totalLayoutElements,EFFECT_DESC.pBytecode,
 		EFFECT_DESC.BytecodeLength, &inputLayout_ );
 	vsBuffer->Release();
@@ -63,8 +49,9 @@ bool DX11ModelDemo::LoadContent()
 
 	m_radius = 200;
 	//加载模型数据
-	model_ = new ObjModel(new ModelObj("..\\model\\XJC\\model.obj"),D3D11Device_);		//树
-	//model_ = new ObjModel(new ModelObj("..\\model\\09\\saloon.obj"),D3D11Device_);	//汽车
+	model_ = new ObjModel(new ModelObj("..\\Resources\\model\\Female.obj"),D3D11Device_);		//ren 
+	//model_ = new ObjModel(new ModelObj("..\\Resources\\model\\XJC\\model.obj"),D3D11Device_);		//树
+	//model_ = new ObjModel(new ModelObj("..\\Resources\\model\\09\\saloon.obj"),D3D11Device_);	//汽车
 
 	
 	D3D11_SAMPLER_DESC mapDesc;

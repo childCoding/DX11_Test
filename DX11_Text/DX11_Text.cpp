@@ -233,6 +233,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			g_dxBase = new DX11FreeTypeFontDemo("E:/BaiduYunDownload/CEGUI/cegui-0.8.4/datafiles/fonts/msyh.ttf");
 			g_dxBase->Initialize(hInst,hWnd);
 			break;
+		case IDM_NORMALMAPING:
+			g_dxBase->ShutDown();
+			delete  g_dxBase;
+			g_dxBase = new DX11NormalMappingDemo();
+			g_dxBase->Initialize(hInst,hWnd);
+			break;
 
 		default:
 			return DefWindowProc(hWnd, message, wParam, lParam);
