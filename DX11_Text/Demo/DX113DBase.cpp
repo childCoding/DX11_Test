@@ -169,7 +169,8 @@ void DX113DBase::Update(float dtime)
 
 	//更新视角、投影矩阵
 	//相机位置根据球面坐标(m_radius、m_theta、m_phy)来确定
-	XMVECTOR pos = XMVectorSet(m_radius*sin(m_phy)*cos(m_theta),m_radius*cos(m_phy),m_radius*sin(m_phy)*sin(m_theta),1.f);
+	cameraPos_ = XMFLOAT3(m_radius*sin(m_phy)*cos(m_theta),m_radius*cos(m_phy),m_radius*sin(m_phy)*sin(m_theta));
+	XMVECTOR pos = XMVectorSet(cameraPos_.x,cameraPos_.y,cameraPos_.z,1.f);
 	XMVECTOR target = XMVectorSet(0.f,0.f,0.f,1.f);
 	XMVECTOR up = XMVectorSet(0.f,1.f,0.f,0.f);   //y方向朝上
 	XMMATRIX viewMatrix = XMMatrixLookAtLH(pos,target,up);
@@ -241,6 +242,15 @@ bool DX113DBase::LoadShader(std::string file)
 			vsBuffer->Release( );
 		return false;
 	}
+	vsBuffer->Release();
+	return true;
+}
+void DX113DBase::SetEffectRawValue(const char * name, void* val,int offset,int size)
+{
+	ID3DX11EffectVariable* vMatrix = effect_->GetVariableByName(name);
+	vMatrix->SetRawValue(val,offset,size);
+
+
 }
 void DX113DBase::SetEffectMatrix(const char * name, XMMATRIX& val)
 {

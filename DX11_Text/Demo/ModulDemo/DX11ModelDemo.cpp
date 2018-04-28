@@ -16,7 +16,7 @@ DX11ModelDemo::~DX11ModelDemo(void)
 bool DX11ModelDemo::LoadContent()
 {
 	//加载定点着色器
-	if(!LoadShader("../Resources/Shader/DX11Light.fx"))
+	if(!LoadShader("../Resources/Shader/DX11ModelDemo.fx"))
 	{
 		return false;
 	}
@@ -28,7 +28,6 @@ bool DX11ModelDemo::LoadContent()
 	};
 	unsigned int totalLayoutElements = ARRAYSIZE( solidColorLayout );
 
-	ID3DBlob* vsBuffer = 0;
 	ID3DX11EffectTechnique* colorTechnique;
 	colorTechnique = effect_->GetTechniqueByName("ColorShift");
 	ID3DX11EffectPass* colorPass = colorTechnique->GetPassByIndex(0);
@@ -41,7 +40,7 @@ bool DX11ModelDemo::LoadContent()
 	HRESULT d3dResult = D3D11Device_->CreateInputLayout( solidColorLayout,
 		totalLayoutElements,EFFECT_DESC.pBytecode,
 		EFFECT_DESC.BytecodeLength, &inputLayout_ );
-	vsBuffer->Release();
+
 	if( FAILED( d3dResult ) )
 	{
 		return false;
@@ -49,9 +48,9 @@ bool DX11ModelDemo::LoadContent()
 
 	m_radius = 200;
 	//加载模型数据
-	model_ = new ObjModel(new ModelObj("..\\Resources\\model\\Female.obj"),D3D11Device_);		//ren 
+	//model_ = new ObjModel(new ModelObj("..\\Resources\\model\\Female.obj"),D3D11Device_);		//ren 
 	//model_ = new ObjModel(new ModelObj("..\\Resources\\model\\XJC\\model.obj"),D3D11Device_);		//树
-	//model_ = new ObjModel(new ModelObj("..\\Resources\\model\\09\\saloon.obj"),D3D11Device_);	//汽车
+	model_ = new ObjModel(new ModelObj("..\\Resources\\model\\09\\saloon.obj"),D3D11Device_);	//汽车
 
 	
 	D3D11_SAMPLER_DESC mapDesc;
@@ -147,7 +146,7 @@ void DX11ModelDemo::Render()
 	XMMATRIX projMat = XMLoadFloat4x4(&projMatrix_);
 	projMatrix->SetMatrix( reinterpret_cast<float*>(&projMat) );
 
-	model_->render(D3D11DeviceContext_,effect_);
+	model_->render(D3D11DeviceContext_,effect_,"ColorShift");
 
 	DXGISwapChain_->Present(0,0);
 }

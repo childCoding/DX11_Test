@@ -73,7 +73,11 @@ bool DX11CubeDemo::LoadContent()
 	{
 		return false;
 	}
-	
+	struct Vertex
+	{
+		XMFLOAT3 pos;
+		XMFLOAT2 tex;
+	};
 
 	//加载顶点数据
 	Vertex vertices[] =

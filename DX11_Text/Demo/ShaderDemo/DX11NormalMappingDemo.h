@@ -2,7 +2,7 @@
 #include "../dx113dbase.h"
 #include "../../Common/GeometryGens.h"
 #include "../../Common/Lights.h"
-
+#include "../../ResourceProvider/objModel.h"
 class DX11NormalMappingDemo :
 	public DX113DBase
 {
@@ -24,7 +24,7 @@ private:
 	bool initBuffer();
 
 	GeoGen::MeshData m_floor;
-
+	ObjModel * model_;
 	ID3DX11Effect* effect_;
 	ID3DX11EffectTechnique* m_tech;
 

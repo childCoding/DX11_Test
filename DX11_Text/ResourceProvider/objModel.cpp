@@ -4,6 +4,8 @@ inline void ConvertVertex(NormalTexVertex& from,DX113DBase::Vertex& to)
 {
 	to.pos =  from.pos;
 	to.tex =  from.tex;
+	to.normal = from.normal;
+	to.tangent = from.tangent;
 }
 
 ObjModel::ObjModel(ModelObj* obj,ID3D11Device* d3d) {
@@ -112,7 +114,7 @@ void ObjModel::initTextures() {
 	}
 }
 
-void ObjModel::render(ID3D11DeviceContext* D3D11DeviceContext_,ID3DX11Effect* effect_) {
+void ObjModel::render(ID3D11DeviceContext* D3D11DeviceContext_,ID3DX11Effect* effect_,string technique) {
 
 
 	unsigned int stride = sizeof(DX113DBase::Vertex);
@@ -128,15 +130,16 @@ void ObjModel::render(ID3D11DeviceContext* D3D11DeviceContext_,ID3DX11Effect* ef
 		if (it == textures.end())
 		{
 			DXTRACE_MSG("find not textures" );
+		}else
+		{
+			ID3DX11EffectShaderResourceVariable* colorMap;
+			colorMap = effect_->GetVariableByName("colorMap_")->AsShaderResource( );
+			colorMap->SetResource( it->second );
 		}
 
-		ID3DX11EffectShaderResourceVariable* colorMap;
-		colorMap = effect_->GetVariableByName( "colorMap_" )->AsShaderResource( );
-		colorMap->SetResource( it->second );
 
-		ID3DX11EffectTechnique* colorInvTechnique;
-		colorInvTechnique = effect_->GetTechniqueByName( "ColorShift" );
 		D3DX11_TECHNIQUE_DESC techDesc;
+		ID3DX11EffectTechnique* colorInvTechnique = effect_->GetTechniqueByName( technique.c_str() );
 		colorInvTechnique->GetDesc( &techDesc );
 		for( unsigned int p = 0; p < techDesc.Passes; p++ )
 		{

@@ -17,7 +17,7 @@
 #include "Demo/ModulDemo/DX11ModelDemo.h"
 
 #include "Demo/ShaderDemo/DX11NormalMappingDemo.h"
-
+#include "Demo/ShaderDemo/DX11Light.h"
 
 #define MAX_LOADSTRING 100
 
@@ -239,7 +239,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			g_dxBase = new DX11NormalMappingDemo();
 			g_dxBase->Initialize(hInst,hWnd);
 			break;
-
+		case IDM_LIGHT:
+			g_dxBase->ShutDown();
+			delete  g_dxBase;
+			g_dxBase = new DX11Light();
+			g_dxBase->Initialize(hInst,hWnd);
+			break;
 		default:
 			return DefWindowProc(hWnd, message, wParam, lParam);
 		}

@@ -6,13 +6,15 @@ cbuffer Frame
 	float4x4 g_view;
 	float4x4 g_project;
 	float4x4 g_worldViewProj;
+	float4x4 g_worldInvTranspose;
 
-	float3	g_lightDirection;
-	float3  g_lightDirectionColor;
+	float3	g_eyePos;
+	float3	g_lightToDirection;
+	float3  g_lightToDirectionColor;
 	Material g_material;
 }
 
-
+Texture2D colorMap_ ;
 //Input vertex
 struct VertexIn
 {
@@ -29,37 +31,28 @@ struct VertexOut
 	float4	posH		: SV_POSITION;		//Projection space position
 	float3	normal		: NORMAL;			//World space normal
 	float3	tangent		: TANGENT;			//World space tangent
-	float2	tex			: TEXCOORD0;		//Texture coordiation
-	float4	shadowTex	: TEXCOORD1;		//Shadow map coordiation
+	//float2	tex			: TEXCOORD0;		//Texture coordiation
+	//float4	shadowTex	: TEXCOORD1;		//Shadow map coordiation
 };
 
-void ComputeDirLight(Material mat,			//Material
-					DirLight dirLight,		//directional light
+float3 ComputeDirLight(Material mat,			//Material
+					float3 dirToLight,		//directional light
+					float3 lightColor,		//directional light
 					float3 normal,			//vertex normal
-					float3 toEye,			//Vector from vertex to eye
-					out float4 ambient,		//Outputs: ambient, diffuse, specular
-					out float4 diffuse,	
-					out float4 specular)
+					float3 toEye)
 {
-	ambient  = float4(0.0f,0.0f,0.f,0.f);
-	diffuse  = float4(0.f,0.f,0.f,0.f);
-	specular = float4(0.f,0.f,0.f,0.f);
-
-	//Ambient result
-	ambient = mat.ambient * dirLight.ambient;
-
-	float diffFactor = -dot(normal,dirLight.dir);
-
-	[flatten]
-	if(diffFactor > 0)
-	{
-		//Diffuse result
-		diffuse = mat.diffuse * dirLight.diffuse * diffFactor;
-
-		float3 refLight = reflect(dirLight.dir,normal);
-		float specFactor = pow(max(dot(refLight,toEye),0.f),mat.specular.w);
-		specular = mat.specular * dirLight.specular * specFactor;
-	}
+	normal = normalize(normal);
+	dirToLight = normalize(dirToLight);
+	float diffFactor = dot(normal,dirToLight);
+	float3 finalColor = lightColor * saturate(diffFactor);
+	
+	toEye =	normalize(toEye);
+	float3 halfway = normalize(toEye + dirToLight);
+	float sepcFactor = dot(halfway,normal);
+	sepcFactor = saturate(sepcFactor);
+	sepcFactor = pow( sepcFactor,mat.specular.w ) * mat.specular.z;
+	finalColor +=  lightColor.rgb * saturate(sepcFactor);
+	return finalColor;
 }
 
 
@@ -78,15 +71,18 @@ VertexOut VS(VertexIn vin)
 }
 float4 PS_Direction(VertexOut pin): SV_TARGET
 {
-	return ComputeDirLight()
+	float3 toeye = normalize(g_eyePos - pin.posL);
+	float3 color = ComputeDirLight(g_material,g_lightToDirection,g_lightToDirectionColor,normalize(pin.normal),toeye);
+	return float4(color.r,color.g,color.b,1.f);
+	//return float4(0.f,0.f,0.f,0.f);
 }
 float4 PS_Point(VertexOut pin): SV_TARGET
 {
-
+	return float4(0.f,0.f,0.f,1.f);
 }
 float4 PS_Spot(VertexOut pin): SV_TARGET
 {
-
+	return float4(0.f,0.f,0.f,1.f);
 }
 
 technique11 LightDirection
@@ -94,6 +90,7 @@ technique11 LightDirection
 	pass P0
 	{
 		SetVertexShader( CompileShader(vs_5_0, VS()) );
+		SetGeometryShader(NULL);
 		SetPixelShader( CompileShader(ps_5_0, PS_Direction()) );
 	}
 }

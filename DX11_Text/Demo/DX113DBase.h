@@ -9,6 +9,8 @@ public:
 	struct Vertex
 	{
 		XMFLOAT3 pos;
+		XMFLOAT3 normal;
+		XMFLOAT3 tangent;
 		XMFLOAT2 tex;
 	};
 	DX113DBase(void);
@@ -26,6 +28,7 @@ public:
 
 	bool LoadShader(std::string file);
 
+	void SetEffectRawValue(const char * name, void* val,int offset,int size);
 	void SetEffectMatrix(const char * name, XMFLOAT4X4& val);
 	void SetEffectMatrix(const char * name, XMMATRIX& val);
 	void SetEffectSampler(const char * name,int index, ID3D11SamplerState* val);
@@ -36,9 +39,14 @@ protected:
 
 	ID3DX11Effect* effect_;
 
+	XMFLOAT3   cameraPos_;
 	XMFLOAT4X4 viewMatrix_;
 	XMFLOAT4X4 projMatrix_;
 	XMFLOAT4X4 worldMat_;
+
+	XMFLOAT4X4 worldInverseMat_;
+	XMFLOAT4X4 worldViewProjMat_;
+
 
 	POINT	m_lastPos;			//上一次鼠标位置，用于跟踪鼠标位移
 

@@ -36,9 +36,9 @@ PS_Input VS_Main( VS_Input vertex )
 }
 float4 PS_Main( PS_Input frag ) : SV_TARGET
 {
-	
+	//return float4(1,1,1,1);
 	float4 col = colorMap_.Sample( colorSampler_, frag.tex0 );
-	clip(col.a-0.2f);  
+	//clip(col.a-0.2f);  
 	return col ;
 	/*
 	float4 col = colorMap_.Sample( colorSampler_, frag.tex0 );

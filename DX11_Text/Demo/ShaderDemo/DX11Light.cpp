@@ -4,6 +4,13 @@
 
 DX11Light::DX11Light(void)
 {
+	lightDirection_ =  XMFLOAT3(-1,0,0) ;
+	lightDirectionColor_ = XMFLOAT3(1,1,1);
+
+	material_.ambient = XMFLOAT4(0,0,0,0);
+	material_.diffuse = XMFLOAT4(0.7,0,0,1);
+	material_.specular = XMFLOAT4(0,0,0.5,1);
+	material_.reflection = XMFLOAT4(1,1,1,1);
 }
 
 
@@ -20,16 +27,17 @@ bool DX11Light::LoadContent()
 
 	D3D11_INPUT_ELEMENT_DESC solidColorLayout[] =
 	{
-		{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT,
-		0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
-		{ "TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT,
-		0, 12, D3D11_INPUT_PER_VERTEX_DATA, 0 }
+		{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT,		0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
+		{ "NORMAL", 0, DXGI_FORMAT_R32G32B32_FLOAT,			0, 12, D3D11_INPUT_PER_VERTEX_DATA, 0 },
+		{ "TANGENT", 0, DXGI_FORMAT_R32G32B32_FLOAT,		0, 24, D3D11_INPUT_PER_VERTEX_DATA, 0 },
+		{ "TEXCOORD", 0, DXGI_FORMAT_R32G32_FLOAT,			0, 36, D3D11_INPUT_PER_VERTEX_DATA, 0 }
 	};
 
 	unsigned int totalLayoutElements = ARRAYSIZE( solidColorLayout );
 
 	ID3DX11EffectTechnique* colorTechnique;
-	colorTechnique = effect_->GetTechniqueByName("ColorShift");
+	colorTechnique = effect_->GetTechniqueByIndex(0);
+	//colorTechnique = effect_->GetTechniqueByName("LightDirection");
 	ID3DX11EffectPass* colorPass = colorTechnique->GetPassByIndex(0);
 
 	D3DX11_PASS_SHADER_DESC PASS_DESC;
@@ -48,6 +56,7 @@ bool DX11Light::LoadContent()
 
 	m_radius = 20;
 	//加载模型数据
+	//model_ = new ObjModel(new ModelObj("..\\Resources\\model\\sphere.obj"),D3D11Device_);		//ren 
 	model_ = new ObjModel(new ModelObj("..\\Resources\\model\\Female.obj"),D3D11Device_);		//ren 
 	//model_ = new ObjModel(new ModelObj("..\\Resources\\model\\XJC\\model.obj"),D3D11Device_);		//树
 	//model_ = new ObjModel(new ModelObj("..\\Resources\\model\\09\\saloon.obj"),D3D11Device_);	//汽车
@@ -61,7 +70,7 @@ bool DX11Light::LoadContent()
 	mapDesc.ComparisonFunc = D3D11_COMPARISON_NEVER;
 	mapDesc.Filter = D3D11_FILTER_MIN_MAG_MIP_LINEAR;
 	mapDesc.MaxLOD = D3D11_FLOAT32_MAX;
-
+	
 	d3dResult = D3D11Device_->CreateSamplerState(&mapDesc,&colorMapSampler_);
 	if (FAILED(d3dResult))
 	{
@@ -116,7 +125,7 @@ void DX11Light::Render()
 	ZeroMemory(&rsDesc,sizeof(rsDesc));
 	rsDesc.CullMode = D3D11_CULL_BACK;
 	rsDesc.DepthClipEnable = true;
-	rsDesc.FillMode = D3D11_FILL_WIREFRAME;		//WireFrame
+	rsDesc.FillMode = D3D11_FILL_SOLID;//D3D11_FILL_WIREFRAME;		//WireFrame
 	rsDesc.FrontCounterClockwise = false;
 	ID3D11RasterizerState *rsState(NULL);
 	D3D11Device_->CreateRasterizerState(&rsDesc,&rsState);
@@ -126,19 +135,31 @@ void DX11Light::Render()
 
 	//D3D11DeviceContext_->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
-	SetEffectSampler("colorSampler_",0,colorMapSampler_);
+	XMMATRIX worldviewproj = XMLoadFloat4x4(&worldMat_) * XMLoadFloat4x4(&viewMatrix_)*XMLoadFloat4x4(&projMatrix_);
+	XMStoreFloat4x4(&worldViewProjMat_,worldviewproj);
+
+	SetEffectRawValue("g_lightToDirectionColor",&lightDirectionColor_,0,sizeof(lightDirectionColor_));
+	SetEffectRawValue("g_lightToDirection",&lightDirection_,0,sizeof(lightDirection_));
+	SetEffectRawValue("g_eyePos",&cameraPos_,0,sizeof(cameraPos_));
+	SetEffectRawValue("g_material",&material_,0,sizeof(material_));
+
+	//SetEffectSampler("colorSampler_",0,colorMapSampler_);
 	SetEffectMatrix("g_world",worldMat_);
 	SetEffectMatrix("g_view",viewMatrix_);
 	SetEffectMatrix("g_project",projMatrix_);
+	SetEffectMatrix("g_worldViewProj",worldViewProjMat_);
+
+	//  XMMatrixInverse(XMLoadFloat4x4(&worldMat_)) 
+	SetEffectMatrix("g_worldInvTranspose",worldInverseMat_);
 
 
-	model_->render(D3D11DeviceContext_,effect_);
+	model_->render(D3D11DeviceContext_,effect_,"LightDirection");
 
 	DXGISwapChain_->Present(0,0);
 }
 void DX11Light::Update(float dtime)
 {
-	DX11Light::Update(dtime);
+	DX113DBase::Update(dtime);
 
-
+	XMStoreFloat4x4(&worldInverseMat_, XMMatrixTranspose(XMLoadFloat4x4(&worldMat_))) ;
 }

@@ -117,7 +117,10 @@ bool DX11NormalMappingDemo::initResourceView()
 bool DX11NormalMappingDemo::initBuffer()
 {
 	//初始化定点序列
-	GeoGen::CreateGrid(5,5,20,20,m_floor);
+	//GeoGen::CreateGrid(5,5,20,20,m_floor);
+	GeoGen::CreateSphere(5,200,200,m_floor);
+
+	model_ = new ObjModel(new ModelObj("..\\Resources\\model\\sphere.obj"),D3D11Device_);
 
 	D3D11_BUFFER_DESC desc;
 	ZeroMemory(&desc,sizeof(desc));
@@ -290,6 +293,7 @@ void DX11NormalMappingDemo::Render()
 			D3D11DeviceContext_->DrawIndexed( m_floor.indices.size(), 0, 0 );
 		}
 	}
+	model_->render(D3D11DeviceContext_,effect_,"Light3");
 	DXGISwapChain_->Present(0,0);
 }
 void DX11NormalMappingDemo::Update(float dtime)
@@ -307,7 +311,7 @@ void DX11NormalMappingDemo::Update(float dtime)
 	ID3DX11EffectVariable *fxEyePos;
 	fxEyePos = effect_->GetVariableByName("g_eyePos");
 	fxEyePos->SetRawValue(&eye,0,sizeof(eye));
-
+	
 	
 	if(KeyDown('1'))
 		m_tech =  effect_->GetTechniqueByName( "Light3" );

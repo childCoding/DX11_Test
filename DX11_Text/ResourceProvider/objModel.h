@@ -18,7 +18,7 @@ public:
 	~ObjModel();
 	void initVertices();
 	void initTextures();
-	void render(ID3D11DeviceContext* D3D11DeviceContext_,ID3DX11Effect* effect_);
+	void render(ID3D11DeviceContext* D3D11DeviceContext_,ID3DX11Effect* effect_,string technique);
 	void renderSimple();
 
 private:
